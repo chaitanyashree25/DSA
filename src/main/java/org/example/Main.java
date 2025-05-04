@@ -6,16 +6,60 @@ import java.util.Arrays;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-     ArrayPrac arrayPrac = new ArrayPrac();
-     int[] arr = {10, 4, 3, 50, 23};
-     int[] arr1 = {1,2,3,4,5,6};
-     int[] arr2 = {1,4,4,5,5,8,8,9,10,10};
-     System.out.println("Maximum value : " +arrayPrac.maxnum(arr));
-     System.out.println("Sum of elements : " +arrayPrac.sumNum(arr));
-     System.out.println("Reversed elements : " + Arrays.toString(arrayPrac.rev(arr)));
-     System.out.println("The array " +Arrays.toString(arr1)+ " is " + (arrayPrac.checkSorted(arr1) ? "sorted" : "not sorted"));
-     System.out.println("The array " +Arrays.toString(arr)+ " is " + (arrayPrac.checkSorted(arr) ? "sorted" : "not sorted"));
-    System.out.println("The array length after duplication removed : " +arrayPrac.RemDup(arr2));
-    System.out.println("The second largest number in the array : " +arrayPrac.secondLargest(arr));
+
+    MathsPrac01 mathsPrac01 = new MathsPrac01();
+    /*Count the number of digit*/
+    System.out.println("The number of digits :" +mathsPrac01.countDigit(345261));//correct
+        System.out.println("The number of digits :" +mathsPrac01.countDigit(0));//Edge case
+
+        /*Reverse the integer*/
+        System.out.println("The reverse of the number:" +mathsPrac01.reverseInteger(123));
+
+        /*Check if its palindrome*/
+
+        boolean result = mathsPrac01.palindrome(121);
+        if(result == true){
+            System.out.println("It is Palindrome");
+        }else{
+            System.out.println("It is not Palindrome");
+        }
+
+        /*To find gcd*/
+        System.out.println("GCD of " + 60 + " and " +36+ " is " +mathsPrac01.gcd(60,36));
+
+        /* To find lcm */
+
+        System.out.println("LCM of " + 12 + " and " +18+ " is " +mathsPrac01.gcd(12,18));
+
+        /*Check if the number is prime */
+
+        if(mathsPrac01.checkPrime(13)){
+            System.out.println("It is Prime");
+        }else{
+            System.out.println("It is not Prime");
+        }
+
+        /* PRint the prime divisors */
+
+        mathsPrac01.printPrimeDiv(60);
+
+        /*Count number of divisors */
+
+        System.out.println(mathsPrac01.CountDivisors(36));
+
+        /*Sum of Digits Until a Single Digit (Digital Root)*/
+
+        System.out.println("Sum :" +mathsPrac01.SumDigits(9875));
+
+        /* Trailing zero*/
+
+        System.out.println("Trailing Zeros :" +mathsPrac01.countTrailingZero(100));
+
+
+
     }
+
+
+
+
 }
